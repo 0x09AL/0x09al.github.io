@@ -85,5 +85,6 @@ To that's it for Browser-C2. As I mentioned previously this code is very beta an
 Hope you enjoyed this short blog post.
 
 Follow me on Twitter : @0x09AL
+
 Browser-C2 : https://github.com/0x09AL/Browser-C2
 
