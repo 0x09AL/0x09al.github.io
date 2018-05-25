@@ -6,8 +6,8 @@ During the recent years companies are starting to get better at security. If 5-6
 
 This blogpost will describe a little "challenge" I faced during an engagment, how I solved it and will describe Browser-C2.
 
-So imagine gaining initial foothold to a pivot point, but you can't estabilish external connections because every endpoint has strict host-based firewall policies and they are using a proxy.
-The first thing that came in my mind was that they were using some kind of host-based firewall and since I couldn't estabilish connections even on the same subnet , the policies were based on applications.
+So imagine gaining initial foothold to a pivot point, but you can't establish external connections because every endpoint has strict host-based firewall policies and they are using a proxy.
+The first thing that came in my mind was that they were using some kind of host-based firewall and since I couldn't establish connections even on the same subnet , the policies were based on applications.
 
 To verify my theory, I executed a hidden browser window through my pivot point to visit a specific URL and I received the callback. That meant that the browser was allowed to do connections and I needed to use some kind of Browser based only communication.
 
