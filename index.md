@@ -2,24 +2,28 @@
 
 # Intro
 
-During the recent years companies are starting to get better at security. If 5-6 years before you could "finish" your pentest in a day , increased security awareness  
-is making them "harder" and more challenging. This blogpost will describe a little "challenge" I faced during an engagment, how I solved it and will describe Browser-C2.
+During the recent years companies are starting to get better at security. If 5-6 years before you could "finish" your pentest in a day , increased security awareness  is making them "harder" and more challenging.
+
+This blogpost will describe a little "challenge" I faced during an engagment, how I solved it and will describe Browser-C2.
 
 So imagine gaining initial foothold to a pivot point, but you can't estabilish external connections because every endpoint has strict host-based firewall policies and they are using a proxy.
-The first thing that came in my mind was that they were using some kind of host-based firewall and since I couldn't estabilish connections even on the same subnet , the policies were based on applications.
+The first thing that came in my mind was that there was using some kind of host-based firewall and since I couldn't estabilish connections even on the same subnet , the policies were based on applications.
 
-To verify my theory, I executed a hidden browser window through my pivot point to visit a specific URL and I received the callback. That meant that the browser were allowed to do connections and I needed to use some kind of Browser based only communication.
+To verify my theory, I executed a hidden browser window through my pivot point to visit a specific URL and I received the callback. That meant that the browser was allowed to do connections and I needed to use some kind of Browser based only communication.
 
-At first i thought, "ok there is probably a tool to do this" but I was wrong. So that is how all started and I ended up writing Browser-C2 , which is a POC code to use
-a legitemate browser to do Command and Control operations.
+At first i thought, "ok there is probably a tool to do this" but I was wrong. So that is how all started and I ended up writing Browser-C2 , which is a **POC** code to use a legitemate browser to do Command and Control operations.
 
 
 
 # Browser-C2 Architecture
 
-Browser-C2 Architecture is pretty simple. There are two elements. The first one is the Server and the other one is the Agent.
+Browser-C2 Architecture is pretty simple. There are two elements.
+The first one is the Server and the other one is the Agent.
+
 The server will start a HTTP listener which will wait for callbacks and data from the "victim" browser. 
+
 The agent will start a HTTP listener locally and also execute a browser to connect to the Server.
+
 
 All the communication is done by the client browser and is sent to the Agent by HTTP Requests.
 
@@ -37,7 +41,7 @@ There is a lot of room for improvements , for example (Filtering of input in Age
 
 So enough with the talking let's demo it.
 
-Browser-C2 components are built in Go. First you need to install gorilla/mux and chzyer/readline.
+Browser-C2 components are built in Go. First you need to install **gorilla/mux** and **chzyer/readline**.
 
 Before compiling any of the components you need to make some changes.
 
