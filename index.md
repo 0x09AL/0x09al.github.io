@@ -46,7 +46,7 @@ Browser-C2 components are built in Go. First you need to install **gorilla/mux**
 Before compiling any of the components you need to make some changes.
 
 ## Agent
-You need to first configure the C2Url in agent.go to match your own attacking url.
+You need to first configure the C2Url in agent.go to match your own C&C url.
 
 ![ScreenShot](https://raw.githubusercontent.com/0x09AL/Browser-C2/master/images/c2url.png)
 
