@@ -1,3 +1,89 @@
-# Test
+# Browser-C2 using legitimate browsers for Command and Control Operations
 
-``` Testing the blog ```
+# Intro
+
+During the recent years companies are starting to get better at security. If 5-6 years before you could "finish" your pentest in a day , increased security awareness  
+is making them "harder" and more challenging. This blogpost will describe a little "challenge" I faced during an engagment, how I solved it and will describe Browser-C2.
+
+So imagine gaining initial foothold to a pivot point, but you can't estabilish external connections because every endpoint has strict host-based firewall policies and they are using a proxy.
+The first thing that came in my mind was that they were using some kind of host-based firewall and since I couldn't estabilish connections even on the same subnet , the policies were based on applications.
+
+To verify my theory, I executed a hidden browser window through my pivot point to visit a specific URL and I received the callback. That meant that the browser were allowed to do connections and I needed to use some kind of Browser based only communication.
+
+At first i thought, "ok there is probably a tool to do this" but I was wrong. So that is how all started and I ended up writing Browser-C2 , which is a POC code to use
+a legitemate browser to do Command and Control operations.
+
+
+
+# Browser-C2 Architecture
+
+Browser-C2 Architecture is pretty simple. There are two elements. The first one is the Server and the other one is the Agent.
+The server will start a HTTP listener which will wait for callbacks and data from the "victim" browser. 
+The agent will start a HTTP listener locally and also execute a browser to connect to the Server.
+
+All the communication is done by the client browser and is sent to the Agent by HTTP Requests.
+
+The architecture is as follows :
+
+![ScreenShot](https://raw.githubusercontent.com/0x09AL/Browser-C2/master/images/Arch.png)
+
+
+This code is still a POC and not implemented very good.
+
+There is a lot of room for improvements , for example (Filtering of input in Agent Name, Access-Allow-Origin header, Encryption support, Checking of XMLHTTP request if they are successfull or not etc) so keep that in mind before using it in production and relay 100% to it.
+
+
+# Browser-C2 Demo
+
+So enough with the talking let's demo it.
+
+Browser-C2 components are built in Go. First you need to install gorilla/mux and chzyer/readline.
+
+Before compiling any of the components you need to make some changes.
+
+## Agent
+You need to first configure the C2Url in agent.go to match your own attacking url.
+
+![ScreenShot](https://raw.githubusercontent.com/0x09AL/Browser-C2/master/images/c2url.png)
+
+In case you want to allow only one specific URL to access the Agent HTTP Server specify your custom Access-Control-Allow-Origin.
+
+After you have configured the information above you can compile the Agent by running
+
+``` C:\Users\pwn\go\src\Browser-C2\agent > go build agent.go ```
+
+## Server
+
+You can change the default options on the Server like the listening port. 
+Also in the file ``` jquery.js ``` you need to change the 
+
+```
+var url = "http://SERVER IP:8080/"; // URL of the Remote Endpoint
+var local_url = "http://127.0.0.1:8081/"; // URL of the Agent Local Endpoint
+
+```
+
+To compile the server go to the home dir of the project and :
+
+``` C:\Users\pwn\go\src\Browser-C2 > go build ```
+
+
+After compiling the components run the server on your C2 and the Agent in the "Victim" machine.
+
+
+At the moment a connection is estabilished it will print the agent name.
+You can connect to it by using the ``` use {AGENT NAME} ``` command.
+After you are at the Agent workspace it is a virtual CMD for the remote system.
+
+
+Example of executing commands to a connected agent.
+
+![ScreenShot](https://raw.githubusercontent.com/0x09AL/Browser-C2/master/images/example.png)
+
+
+To that's it for Browser-C2. As I mentioned previously this code is very beta and there are a lot of ways things can go wrong.
+Hope you enjoyed this short blog post.
+
+Follow me on Twitter : @0x09AL
+Browser-C2 : https://github.com/0x09AL/Browser-C2
+
