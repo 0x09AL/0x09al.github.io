@@ -24,7 +24,7 @@ github_username:  0x09AL
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-slate
+theme: minima
 plugins:
   - jekyll-feed
 
