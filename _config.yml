@@ -17,7 +17,7 @@ title: 0x09AL Security Blog
 email: nema_email@shupak.com
 description: >- # this means to ignore newlines until "baseurl:"
   My personal blog where I post my security research , tools and ideas.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://0x09al.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 0x09AL
 github_username:  0x09AL
