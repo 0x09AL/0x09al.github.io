@@ -22,7 +22,7 @@ Recently I was assigned to do a deployment test of a WAF in a company. I won’t
 
 
 
-After I was provided with the required information I started to look for different ways to bypass it. I was given access to the WAF for different tests and apart from other methods I found to bypass it, an interesting one was by abusing SSL Ciphers. The first time I logged in the WAF the ```Unsupported SSL Ciphers``` alert caught my eye really quick. Once I saw the alert description I started digging more in the documentation of the product and managed to find all they supported SSL ciphers, but before continuing I want to give a quick explanation how an SSL connection works.
+After I was provided with the required information I started to look for different ways to bypass it. I was given access to the WAF for different tests and apart from other methods I found to bypass it, an interesting one was by abusing SSL Ciphers. The first time I logged in the WAF the ```Unsupported SSL Ciphers``` alert caught my eye really quick. Once I saw the alert description I started digging more in the documentation of the product and managed to find all the supported SSL ciphers, but before continuing I want to give a quick explanation how an SSL connection works.
 
 
 The SSL handshake is composed by 3 main phases: 
@@ -34,7 +34,7 @@ The handshake begins by the client which sends a ClientHello message. This messa
 
 # Certificate Exchange
 
-After the connection is initialized the server needs to prove its identity to the client. The server sends the SSL certificate to the client and the client checks if trust the certificate and continues the connection.
+After the connection is initialized the server needs to prove its identity to the client. The server sends the SSL certificate to the client and the client checks if it trust the certificate and continues the connection.
 
 
 # Key Exchange
@@ -111,7 +111,7 @@ Comparing the result from sslscan and the documentation of the product, I was ab
 *The cipher supported on the webserver but not on WAF*
 
 
-To test my theory I created a WAF rule which will block the request if the path of the request was /ssl-cipher-test.
+To test my theory I created a WAF rule which blocked the request if the path of the request was /ssl-cipher-test.
 
 Visiting the path will block the connection successfully.
 
