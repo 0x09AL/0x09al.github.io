@@ -7,7 +7,7 @@ categories: security ispconfig exploit vulnerability
 
 ## Introduction
 
-In this blogpost I will write about a suspicious which turned out to be fale, how regex-es can go wrong and also how to chain logic features to achieve reliable Remote Command Execution. 
+In this blogpost I will write about a suspicion I had which turned out to be fale, how regex-es can go wrong and also how to chain logic features to achieve reliable Remote Command Execution. 
 
 I was having a coffe with one of my friends who works at a web-hosting company and talking about the software they use. There I heard about ISPConfig and how many features and secure it was.Since I had some free time , I decided to have a look at it and managed to find a critical vulnerability in it.
 
