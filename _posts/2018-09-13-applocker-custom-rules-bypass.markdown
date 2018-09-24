@@ -69,7 +69,7 @@ An example output can be seen below.
 Now that we have a way to view the custom rules let's try to bypass them.
 
 
-# Bypassing File Hash
+# Bypassing File Hash Rules
 
 This is another common rule that you can bypass easily and used widely in organizations. To bypass the File Hash rule you need to have a practical attack against SHA256 because it's the default hashing algorithm in AppLocker. The only way we can abuse this kind of rule is that the executable in the condition has the ability to arbitrary load code which is not that common but also that has a DLL Hijacking Vulnerability which is more probable.
 
@@ -97,7 +97,7 @@ In a real-life scenario the DLL should be a payload that injects itself in the m
 
 This method will work only if the DLL Rules are not enforced. This is the case most of the time because enabling them will reduce the performance of the system.
 
-# Bypassing FilePath Rules
+# Bypassing File Path Rules
 
 File Path rules are one of the most common rules you will find and also one of the best vectors to bypass AppLocker.
 This rule condition identifies an application by its location in the file system of the computer or on the network.
