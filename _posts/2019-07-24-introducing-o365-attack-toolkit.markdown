@@ -12,4 +12,4 @@ During our red team operations, we frequently come in contact with organisations
 
 In this blogpost we will explore the features that can assist Red Teamers during operations where Office 365 is in heavy use.
 
-You can find the full blogpost on https://www.mdsec.co.uk/2019/07/introducing-the-office-365-attack-toolkit/ 
+You can find the full blogpost on [https://www.mdsec.co.uk/2019/07/introducing-the-office-365-attack-toolkit/](https://www.mdsec.co.uk/2019/07/introducing-the-office-365-attack-toolkit/)
