@@ -24,13 +24,10 @@ github_username:  0x09AL
 # Build settings
 markdown: kramdown
 #theme: minima
-<<<<<<< HEAD
 #theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.18.1"
-=======
-theme: jekyll-theme-hacker
 
->>>>>>> 05a8a40ef0680759bb8f8f4475b6fa30ae8496e7
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jekyll-include-cache
