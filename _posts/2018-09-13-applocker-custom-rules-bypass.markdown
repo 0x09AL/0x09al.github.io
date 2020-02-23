@@ -7,7 +7,6 @@ categories: security applocker bypass custom rules windows
 
 
 ## Introduction
-
 Applocker is becoming one of the most implemented security features in big organizations. Implementing AppLocker reduces your risk dramatically especially for workstations. Unfortunately for the blue-team, there are a lot of custom configurations that are required for AppLocker apart from the default rules which may open some gaps on your security posture. There are a lot of posts that describe how to bypass Applocker default rules but in this blogpost I will describe the steps that you can take to bypass custom rules, how to find them, parse them and use this information to bypass them.
 
 ## Applocker Custom Rules

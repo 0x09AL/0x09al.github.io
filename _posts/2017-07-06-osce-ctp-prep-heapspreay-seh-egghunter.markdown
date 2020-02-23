@@ -5,7 +5,6 @@ categories: security ctp osce exploitation
 ---
 
 ## Introduction
-
 Hello humans!
 I have been busy working preparing myself for the CTP Course and wanted to share my experience.
 

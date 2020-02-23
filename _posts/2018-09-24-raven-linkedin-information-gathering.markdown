@@ -7,7 +7,6 @@ categories:
 
 
 ## Introduction
-
 Last summer I wrote a simple tool named Raven, which would extract public information from Google and Linkedin and build e-mail list that could be used by pentesters. I mainly wrote it just because I needed it and later decided to publish it. To tell the truth I didn't except that much attention to that tool and I have always wanted to update it but I was busy working on other projects etc. Finally I found some free time and I updated the tool, rewritten it in Go, made it more easy to use and more faster. In this blogpost I will describe the main idea of the tool , how it works and how to use it.
 
 ## Disclaimer

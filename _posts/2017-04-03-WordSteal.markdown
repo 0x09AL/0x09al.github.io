@@ -4,8 +4,6 @@ date:   2017-04-03
 categories: security ctp osce exploitation
 ---
 
-## Introduction
-
 On every external pen-test I do after information gathering and enumeration phase I prepare some spear-phishing campaigns. My favorite method is using Word Macros because most of the companies use a windows environment and Microsoft Office is used widely.
 
 

@@ -3,7 +3,6 @@ title:  "Browser-C2 using legitimate browsers for Command and Control Operations
 date:   2018-05-25 18:42:00 +0200
 categories: security c2c browser
 ---
-# Intro
 
 During the recent years companies are starting to get better at security. If 5-6 years before you could "finish" your pentest in a day , increased security awareness  is making them "harder" and more challenging.
 
