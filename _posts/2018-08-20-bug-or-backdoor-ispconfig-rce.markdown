@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Bug or Backdoor - Exploiting a Remote Code Execution in ISPConfig"
 date:   2018-08-20
 categories: security ispconfig exploit vulnerability

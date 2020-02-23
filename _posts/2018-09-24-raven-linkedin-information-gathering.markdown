@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Raven - Linkedin Information Gathering Tool"
 date:   2018-09-24
 categories: 

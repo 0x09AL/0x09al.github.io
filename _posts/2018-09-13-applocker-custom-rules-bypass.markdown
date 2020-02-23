@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Bypassing AppLocker Custom Rules"
 date:   2018-09-13
 categories: security applocker bypass custom rules windows

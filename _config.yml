@@ -23,18 +23,21 @@ github_username:  0x09AL
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
+theme: minimal-mistakes-jekyll
+
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: true

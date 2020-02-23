@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Browser-C2 using legitimate browsers for Command and Control Operations"
 date:   2018-05-25 18:42:00 +0200
 categories: security c2c browser

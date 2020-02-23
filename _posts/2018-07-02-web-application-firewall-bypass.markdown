@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Bypassing Web-Application Firewalls by abusing SSL/TLS"
 date:   2018-07-02
 categories: waf bypass ssl

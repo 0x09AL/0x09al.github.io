@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "WordSteal - Stealing Windows Credentials through crafted document"
 date:   2017-04-03
 categories: security ctp osce exploitation
