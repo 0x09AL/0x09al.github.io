@@ -1,5 +1,5 @@
 ---
-title:  "Intorducing Office 365 Attack Toolkit"
+title:  "Introducing Office 365 Attack Toolkit"
 date:   2019-05-31
 categories: o365 redteam phishing oauth toolkit
 ---
